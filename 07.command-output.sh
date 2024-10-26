@@ -1,3 +1,4 @@
 #!/bin/bash
+DATE=$(date)
 
-date -u
+echo " Today date is : $DATE"
