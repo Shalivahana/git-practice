@@ -11,9 +11,9 @@ fi
 
 dnf list installed git # Just checking whether installed or not
 
-echo "$?"
+echo "$?" #--> for sucess or failure of previous command if sucess 0 then 1-127
 
-if [ $? -ne 0 ]
+if [ $? -ne 0 ]  #gt, lt, eq, -ne, -ge, -le
 then
     echo "Git is not installed, going to install it.."
     dnf install git -y # here installing
@@ -26,4 +26,20 @@ then
     fi
 else    
     echo "Git is already installed, nothing to do.."
+fi
+dnf list installed mysql 
+
+if [ $? -ne 0 ]
+then
+    echo "MySQL is not installed...going to install"
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo "MySQL installation is failure..please check"
+        exit 1
+    else
+        echo "MySQL installation is success"
+    fi
+else
+    echo "MySQL is already installed..nothing to do"
 fi
