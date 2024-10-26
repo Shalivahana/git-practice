@@ -17,7 +17,7 @@ if [ $? -ne 0 ]
 then
     echo "Git is not installed, going to install it.."
     dnf install git -y # here installing
-    if[ $? -ne 0]
+    if[ $? -ne 0 ]
     then
         echo "Git installation is not sucess ...Check it"
         exit 1
