@@ -1,10 +1,4 @@
 #!/bin/bash
-
-
-
-
-
-
 LOGS_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
@@ -36,7 +30,7 @@ VALIDATE(){
 }
 
 USAGE(){
-    echo -e "$R USAGE:: $N sudo sh 16-redirectors.sh package1 package2 ..."
+    echo -e "$R USAGE:: $N sudo sh 16-redirectors.sh  need to be write packages Ex:package1 package2 ..."
     exit 1
 }
 
